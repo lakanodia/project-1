@@ -1,0 +1,96 @@
+body{
+    font-family: 'Comfortaa';
+}
+.header-nav{
+    display: flex;
+}
+.nav-ul{
+    display: flex;
+    margin-top: 15px;
+}
+.nav-li{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.active-li{
+    background-color: rgb(58, 58, 115);
+    color: white;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.active{
+    color: white;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+.banner-div{
+    background-image: url(../img/img-palm.jpg);
+    width: 100%;
+    height: 324px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+}
+.banner-div::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: inline-block;
+    opacity: 60%;
+}
+.post-div{
+    max-width: 350px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Comfortaa';
+    color: white;
+    border-radius: 7px;
+    box-shadow: 5px 5px 20px grey;
+    background-color:  rebeccapurple;
+}
+.post-main-div{
+    max-width: 800px;
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.post-div:nth-child(1) {
+    background-color: #FBBA77;
+    margin-bottom: 20px;
+}
+.post-div:nth-child(2) {
+    background-color: #73877c;
+    margin-bottom: 20px;
+}
+.post-div:nth-child(3) {
+    background-color: #6883a9;
+    margin-bottom: 20px;
+}
+.post-div:nth-child(4) {
+    background-color: #8b6d7c;
+    margin-bottom: 20px;
+}
+.post-div:nth-child(5) {
+    background-color: #54826c;
+    margin-bottom: 20px;
+}
+.post-div:nth-child(6) {
+    background-color: #895784;
+    margin-bottom: 20px;
+}
+
+
