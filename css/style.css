@@ -3,10 +3,18 @@ body{
 }
 .header-nav{
     display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    position: fixed;
+    font-weight: 900;
+    background-color:rgb(242, 255, 249);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 }
 .nav-ul{
     display: flex;
-    margin-top: 15px;
 }
 .nav-li{
     width: 150px;
@@ -35,7 +43,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin: 0 auto;
+    margin: 63.2px auto;
 }
 .banner-div::before {
     content: "";
@@ -60,7 +68,7 @@ body{
     box-shadow: 5px 5px 20px grey;
     background-color:  rebeccapurple;
 }
-.post-main-div{
+.united-post-div{
     max-width: 800px;
     margin: 50px auto;
     width: 100%;
