@@ -137,22 +137,41 @@ function serverRequest(){
     request.addEventListener('load', function(){
         let data = JSON.parse(request.responseText);
         data.forEach(element => {
-                        
+            createPosts(element);
+    
         });
     })
+    request.send();
 }
+serverRequest();
 
-
-// function printPosts(params) {
-    
+// function printPosts(data) {
+//     data.forEach(element => {
+//         createPosts(element);             
+//     });
 // }
+// postElement may would change
 
-function createPosts(){
+function createPosts(item){
     let post = document.createElement('div');
     post.classList.add('post-div');
-    let title = document.createElement('h2');
-    title.classList.add('title');
+    post.setAttribute('data-id', item.id);
 
-    
+    let postTitle = document.createElement('h2');
+    postTitle.classList.add('title');
+    postTitle.textContent =  item.id;
 
+    let postElement = document.createElement('h3');
+    postElement.classList.add('title');
+    postElement.textContent =  item.title;
+
+    let postDeleteButton = document.createElement('button');
+    postDeleteButton.textContent = 'Delete Post';
+    postDeleteButton.setAttribute('data-id', item.id);
+
+    post.appendChild(postTitle);
+    post.appendChild(postElement);
+    post.appendChild(postDeleteButton);
+
+    mainPostBlock.appendChild(post);
 }
