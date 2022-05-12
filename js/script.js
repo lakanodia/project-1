@@ -1,3 +1,4 @@
+// Added slider
 let data = [
     {
         id: 1,
@@ -120,9 +121,38 @@ function leftArrowClick(){
 leftArrow.addEventListener('click', leftArrowClick);
 rightArrow.addEventListener('click', rightArrowClick);
 
-// setInterval(() => {
-//     rightArrowClick();
-// }, 3000);
-
+setInterval(() => {
+    rightArrowClick();
+}, 3000);
 
 setSlider();
+
+// Added http request for posts
+
+let mainPostBlock = document.getElementById('mainPostBlock');
+
+function serverRequest(){
+    let request = new XMLHttpRequest();
+    request.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+    request.addEventListener('load', function(){
+        let data = JSON.parse(request.responseText);
+        data.forEach(element => {
+                        
+        });
+    })
+}
+
+
+// function printPosts(params) {
+    
+// }
+
+function createPosts(){
+    let post = document.createElement('div');
+    post.classList.add('post-div');
+    let title = document.createElement('h2');
+    title.classList.add('title');
+
+    
+
+}
