@@ -165,13 +165,13 @@ function createPosts(item){
     postElement.classList.add('title');
     postElement.textContent =  item.title;
 
-    let postDeleteButton = document.createElement('button');
-    postDeleteButton.textContent = 'Delete Post';
-    postDeleteButton.setAttribute('data-id', item.id);
+    let postviewButton = document.createElement('button');
+    postviewButton.textContent = 'View Post';
+    postviewButton.setAttribute('data-id', item.id);
 
     post.appendChild(postTitle);
     post.appendChild(postElement);
-    post.appendChild(postDeleteButton);
+    post.appendChild(postviewButton);
 
     mainPostBlock.appendChild(post);
 }
