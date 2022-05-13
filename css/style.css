@@ -155,7 +155,6 @@ body{
     background: linear-gradient(to top right, #f43f3f 0%, #ff9933 100%);
     opacity: 100%;
 }
-
 .post-div{
     max-width: 350px;
     width: 100%;
@@ -168,7 +167,7 @@ body{
     font-family: 'Comfortaa';
     color: white;
     border-radius: 7px;
-    box-shadow: 5px 5px 20px grey;
+    box-shadow: 5px 5px 20px rgba(179, 132, 101, 0.705);
 }
 .mainPostBlock{
     max-width: 800px;
@@ -179,8 +178,79 @@ body{
     justify-content: space-between;
 }
 .post-div{
-    background-color: #FBBA77;
+    background-color: #cc551e;
+    opacity: 70%;
     margin-bottom: 20px;
 }
+.post-card{
+    position: fixed;
+    top: 52%;
+    left: 0;
+    right: 0;
+    max-width: 600px;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(150, 35, 0, 0.714);
+    border-radius: 7px;
+    box-shadow: 0px 0px 30px rgb(49, 9, 5);
+    margin: 0 auto;
+    display: none;
+    
+}
+.post-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    color: antiquewhite;
+}
+.active-post{
+    display: block;
+}
+.close-icon{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 30px;
+    color: antiquewhite;
+    cursor: pointer;
+}
+.post-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
 
+.post-description{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5%;
+    margin-top: 5%;
 
+}
+.footer-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-weight: 900;
+    background-color:rgba(22, 21, 21, 0.944);
+    width: 100%;
+    height: 62.7px;
+    z-index: 1;
+}
+
+.social-media{
+    font-size: 25px;
+    margin-left: 2vh;
+    color: antiquewhite;
+}
+.current-date{
+    color: antiquewhite;
+}

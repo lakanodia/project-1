@@ -99,6 +99,7 @@ function setSlider(){
     activeDot();
 }
 
+
 function rightArrowClick(){
     if(sliderIndex >= data.length-1){
         sliderIndex = 0;
@@ -130,28 +131,32 @@ setSlider();
 // Added http request for posts
 
 let mainPostBlock = document.getElementById('mainPostBlock');
+let postContent = document.getElementById('postContent');
+let postCard = document.getElementById('postCard');
+let postClose = document.getElementById('close');
 
-function serverRequest(){
+
+
+function serverRequest(url,callBack){
     let request = new XMLHttpRequest();
-    request.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+    request.open('GET', url);
     request.addEventListener('load', function(){
         let data = JSON.parse(request.responseText);
-        data.forEach(element => {
-            createPosts(element);
-    
-        });
+        callBack(data);
     })
     request.send();
+};
+
+serverRequest('https://jsonplaceholder.typicode.com/posts', function(data){
+    printPosts(data)
+});
+
+function printPosts(data) {
+    data.forEach(element => {
+        createPosts(element);             
+    });
 }
-serverRequest();
-
-// function printPosts(data) {
-//     data.forEach(element => {
-//         createPosts(element);             
-//     });
-// }
-// postElement may would change
-
+// postElement may would change to p tag or it depends on what would be in real post
 function createPosts(item){
     let post = document.createElement('div');
     post.classList.add('post-div');
@@ -169,9 +174,59 @@ function createPosts(item){
     postviewButton.textContent = 'View Post';
     postviewButton.setAttribute('data-id', item.id);
 
+    post.addEventListener('click', function(event){
+        postContent.innerHTML = '';
+        let id = event.target.getAttribute('data-id');
+        openPostCard(id);
+    });
+    postTitle.addEventListener('click', onTextClick); 
+    postElement.addEventListener('click', onTextClick); 
+
     post.appendChild(postTitle);
     post.appendChild(postElement);
     post.appendChild(postviewButton);
 
     mainPostBlock.appendChild(post);
 }
+
+
+function onTextClick(event) {
+    event.stopPropagation();
+    postContent.innerHTML = '';
+    let id = event.target.parentElement.getAttribute('data-id');
+    openPostCard(id);
+}
+
+
+function openPostCard(id){
+    postCard.classList.add('active-post');
+    let url = `https://jsonplaceholder.typicode.com/posts/${id}`;
+    serverRequest(url, function(data){
+        postCardInfo(data);
+    });
+}
+
+
+function postCardInfo(item){
+    let titlePost = document.createElement('h2');
+    titlePost.classList.add('post-title');
+    titlePost.innerText = item.title;
+    let descriptionPost = document.createElement('p');
+    descriptionPost.classList.add('post-description');
+    descriptionPost.innerText = item.body;
+    postContent.appendChild(titlePost);
+    postContent.appendChild(descriptionPost);
+    postCard.appendChild(postContent);
+
+    postClose.addEventListener('click', function(){
+        postCard.classList.remove('active-post');
+        postContent.innerHTML = '';
+    });
+}
+
+
+
+// This is current date
+// var today = new Date(); 
+// var currentDate = document.getElementById('current-date');
+// currentDate.innerHTML = today;
