@@ -2,6 +2,14 @@ body{
     font-family: 'Comfortaa';
     background-color: rgba(0, 0, 0, 0.827);
 }
+.section-post-title{
+    text-align: center;
+    font-size: 50px;
+    color: antiquewhite;
+    font-weight: 900;
+    margin: 12vh 0vh 12vh 0vh;
+}
+
 .header-block{
     display: flex;
     justify-content: space-between;
@@ -13,7 +21,6 @@ body{
     left: 0;
     width: 100%;
     z-index: 1;
-    
 }
 .nav-ul{
     display: flex;
@@ -36,25 +43,10 @@ body{
 .nav-a{
     color: beige;
 }
-/* .active{
-    color: white;
-    border-radius: 20px;
-    font-size: 16px;
-} */
-
 .nav-block{
     display: flex;
     justify-content: space-between;
 }
-/* .banner-div{
-    background-image: url(../img/img-palm.jpg);
-    width: 100%;
-    height: 324px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin: 63.2px auto;
-} */
 .sliderBlock{
     position: relative;
     height: 50vh;
@@ -95,7 +87,6 @@ body{
     transition: background-color 0.5s ease-out;
 }
 .arrow:hover{
-    
     background-color: rgba(198, 70, 16, 0.905);
     opacity: 80%;
     box-shadow: 0px 5px 10px #78534ce0;
@@ -164,10 +155,28 @@ body{
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-family: 'Comfortaa';
     color: white;
     border-radius: 7px;
     box-shadow: 5px 5px 20px rgba(179, 132, 101, 0.705);
+    background-color: #cc551e;
+    opacity: 70%;
+    margin-bottom: 20px;
+}
+.post-div:hover{
+    transform: scale(1.07); 
+}
+.view-post{
+    margin-left: 60%;
+    margin-top: 15%;
+    background-color: #ff993300;
+    color: antiquewhite;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.view-post:hover{
+    color: rgba(0, 0, 0, 0.778);
 }
 .mainPostBlock{
     max-width: 800px;
@@ -177,25 +186,19 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.post-div{
-    background-color: #cc551e;
-    opacity: 70%;
-    margin-bottom: 20px;
-}
 .post-card{
     position: fixed;
-    top: 52%;
+    top: 30%;
     left: 0;
     right: 0;
-    max-width: 600px;
+    max-width: 750px;
     width: 100%;
-    height: 300px;
-    background-color: rgba(150, 35, 0, 0.714);
+    height: 350px;
+    background-color: rgba(2, 0, 0, 0.714);
     border-radius: 7px;
     box-shadow: 0px 0px 30px rgb(49, 9, 5);
     margin: 0 auto;
     display: none;
-    
 }
 .post-content{
     display: flex;

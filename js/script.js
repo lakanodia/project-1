@@ -171,6 +171,7 @@ function createPosts(item){
     postElement.textContent =  item.title;
 
     let postviewButton = document.createElement('button');
+    postviewButton.classList.add('view-post');
     postviewButton.textContent = 'View Post';
     postviewButton.setAttribute('data-id', item.id);
 
@@ -227,6 +228,6 @@ function postCardInfo(item){
 
 
 // This is current date
-// var today = new Date(); 
-// var currentDate = document.getElementById('current-date');
-// currentDate.innerHTML = today;
+var today = new Date(); 
+var currentDate = document.getElementById('current-date');
+currentDate.innerHTML = today;
