@@ -38,6 +38,8 @@ let serviceClose = document.getElementById('close-service');
 let serviceForm = document.getElementById('serviceForm');
 let addServiceForm = document.getElementById('add-service-form');
 let closeForm = document.getElementById('close-form');
+let closeServiceButton = document.getElementById('close-service-button');
+let saveServiceButton = document.getElementById('save-service-button');
 
 
 servicesData.forEach(element => {
@@ -48,7 +50,7 @@ servicesData.forEach(element => {
 function createServiceBox(item){
     let serviceDiv = document.createElement('div');
     serviceDiv.classList.add('service-div');
-    serviceDiv.setAttribute('data-id', item.id);
+    serviceDiv.setAttribute('data-id', item.id-1);
 
     let h2ServiceTag = document.createElement('h2');
     h2ServiceTag.classList.add('service-title');
@@ -60,16 +62,28 @@ function createServiceBox(item){
 
     let serviceImgTag = document.createElement('img');
     serviceImgTag.setAttribute('src', item.serviceImage);
-    serviceImgTag.setAttribute('alt', item.id);
+    serviceImgTag.setAttribute('alt', item.id-1);
     serviceImgTag.classList.add('service-img');
 
     let serviceViewButton = document.createElement('button');
     serviceViewButton.classList.add('view-service-button');
-    serviceViewButton.textContent = 'View service';
-    serviceViewButton.setAttribute('data-id', item.id);
+    serviceViewButton.textContent = 'View Service';
+    serviceViewButton.setAttribute('data-id', item.id-1);
+
+
+    let serviceDeleteButton = document.createElement('button');
+    serviceDeleteButton.classList.add('delete-service-button');
+    serviceDeleteButton.textContent = 'Delete Service';
+    serviceDeleteButton.setAttribute('data-id', item.id-1);
 
     serviceViewButton.addEventListener('click', function(event){
         serviceContent.innerHTML = '';
+        let id = event.target.getAttribute('data-id');
+        openServiceCard(id);
+    });
+
+    serviceDeleteButton.addEventListener('click', function(event){
+        event.stopPropagation();
         let id = event.target.getAttribute('data-id');
         openServiceCard(id);
     });
@@ -79,14 +93,20 @@ function createServiceBox(item){
     serviceDiv.appendChild(h2ServiceTag);
     serviceDiv.appendChild(pServiceTag);
     serviceDiv.appendChild(serviceViewButton);
+    serviceDiv.appendChild(serviceDeleteButton);
     servicesBlock.appendChild(serviceDiv);
 }
 
 function openServiceCard(id){
     serviceCard.classList.add('active-post');
-    // let num = servicesData[id]; 
+    // let num  = id.getAttribute('data-id');
     serviceCardInfo(id);
 }
+
+// function deleteService(id){
+//     let url = servicesData[id];
+
+// }
 
 
 // function openServiceCard(id){
@@ -121,15 +141,36 @@ closeForm.addEventListener('click', function(){
     // serviceContent.innerHTML = '';
 });
 
+// function closeFormoverlay(event){
+//     event.stopPropagation();
+//     let parentValue = event.target.parentElement;
+//     let grandParent = parentValue.parentElement;
+//     grandParent.classList.remove('active');
+// }
 
+// addPostForm.addEventListener('submit', function(event){
+//     event.preventDefault();
+//     let inputvalue = {
+//         title: event.target[0].value,
+//         description: event.target[1].value
+//     }
+  
+//     fetch('https://jsonplaceholder.typicode.com/posts',{
+//         method: 'POST',
+//         body: JSON.stringify(inputvalue),
+//         headers: {
+//           'Content-type': 'application/json; charset=UTF-8',
+//         },
+//     })
+//         .then((response) => response.json())
+//         .then((post) => afterPostSave(post));
+//     })
 
+// function afterPostSave(post){
+//     renderPost(post);
+//     addPostOverlay.classList.remove('active');   
+// }
 
-
-
-
-
-
-
-
-
+// closeForm.addEventListener('click', closeFormoverlay);
+// closeFormIcon.addEventListener('click', closeFormoverlay);
 
