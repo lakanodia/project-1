@@ -136,7 +136,6 @@ let postCard = document.getElementById('postCard');
 let postClose = document.getElementById('close');
 
 
-
 function serverRequest(url,callBack){
     let request = new XMLHttpRequest();
     request.open('GET', url);
@@ -226,8 +225,8 @@ function postCardInfo(item){
 }
 
 
-
 // This is current date
 var today = new Date(); 
 var currentDate = document.getElementById('current-date');
 currentDate.innerHTML = today;
+

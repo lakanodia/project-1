@@ -6,10 +6,10 @@ body{
     text-align: center;
     font-size: 50px;
     color: antiquewhite;
+    text-shadow: 2px 2px 8px #ffffff;
     font-weight: 900;
     margin: 12vh 0vh 12vh 0vh;
 }
-
 .header-block{
     display: flex;
     justify-content: space-between;
@@ -20,6 +20,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    box-shadow: 0px 10px 30px rgb(0, 0, 0);
     z-index: 1;
 }
 .nav-ul{
@@ -49,7 +50,7 @@ body{
 }
 .sliderBlock{
     position: relative;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +59,7 @@ body{
 .sliderContent{
     width: 100%;
     height: 100%;
-    /* margin-top: 8vh; */
+    margin-top: 8vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,9 +105,9 @@ body{
     height: 100px;
     top: 50%;
     transform: translateY(-50%);
-    background: linear-gradient(to top right, #ff5050 0%, #ff9933 100%);
+    background: linear-gradient(to top right, #fa4343 0%, #ff9933 100%);
     vertical-align: middle;
-    opacity: 80%;
+    opacity: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,6 +174,7 @@ body{
     border: none;
     cursor: pointer;
     font-size: 20px;
+    font-family: 'Comfortaa';
 }
 
 .view-post:hover{
@@ -209,9 +211,7 @@ body{
     text-align: center;
     color: antiquewhite;
 }
-.active-post{
-    display: block;
-}
+
 .close-icon{
     position: absolute;
     top: 3%;
@@ -246,6 +246,7 @@ body{
     background-color:rgba(22, 21, 21, 0.944);
     width: 100%;
     height: 62.7px;
+    box-shadow: 15px 0px 50px rgb(0, 0, 0);
     z-index: 1;
 }
 
@@ -256,4 +257,143 @@ body{
 }
 .current-date{
     color: antiquewhite;
+}
+
+
+/* Service Styles */
+.services-block{
+    max-width: 800px;
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.service-div{
+    max-width: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 5px 5px 20px rgba(179, 132, 101, 0.705);
+    background-color: #c0aca3;
+    opacity: 70%;
+    margin-bottom: 50px;
+}
+.service-img{
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+.service-title{
+    font-weight: 900;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.view-service-button{
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-color: #ee8d77;
+    height: 30px;
+    width: 150px;
+    background-color: #c0aca300;
+    color: white;
+    box-shadow: none;
+    cursor: pointer;
+    font-family: 'Comfortaa';
+    
+}
+.view-service-button:hover{
+    background-color:#ff5833a2;
+    box-shadow: 0px 0px 15px #ff522b;
+}
+.service-describe{
+    font-size: 15px;
+}
+
+.serviceCard{
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 750px;
+    width: 100%;
+    height: 350px;
+    background-color: rgba(209, 195, 195, 0.96);
+    border-radius: 7px;
+    box-shadow: 0px 0px 30px rgb(219, 194, 192);
+    display: none;
+}
+
+
+.add-service-form{
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color:#bda89e; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-weight: 900;
+    cursor: pointer;
+}
+.add-service-form:hover{
+    box-shadow: 0px 0px 8px #bda89e;
+}
+.serviceForm-block{
+    display: none;
+}
+.serviceForm{
+    max-width: 500px;
+    width: 100%;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #c0aca3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.closeSaveButtons {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: right;
+}
+.margin{
+    margin-top: 38px;
+    outline-style: none;
+}
+.style{
+    border:none;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgba(0, 0, 0, 0.553);
+    border-radius: 5px;
+    background-color: #c0aca3; ;
+}
+.close-service,
+.save-service{
+    margin-right: 10px;
+}
+.active-post{
+    display: block;
 }

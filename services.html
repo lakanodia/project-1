@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>Services</title>
     <meta name="description" content="Free web Tasks">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Laka Nodia">
@@ -38,7 +38,33 @@
             </nav>
         </div>
     </header>
-    
+    <section>
+        <h1 class="section-post-title" >Information About Services and Products</h1>
+        <div class="add-service-form" id="add-service-form">Add new Services</div>
+        <div class="services-block" id="services-block">
+        </div>
+        <div class="serviceCard" id="serviceCard">
+            <div class="serviceContent" id="serviceContent"></div>
+            <div class="close-icon" id="close-service"> <i class="fa-solid fa-xmark"> </i></div>
+        </div>
+        <div class="serviceForm-block" id="serviceForm-block"> 
+            <form action="" class="serviceForm" id="serviceForm">
+                <h3 class="" style="font-weight: 900;">Create New Service or Product</h3>
+                <div class="close-icon " id="close-form"> <i class="fa-solid fa-xmark"> </i></div>
+                <label for="serviceTitle" class="margin ">Service Title</label>
+                <input type="text" class="margin" id="serviceTitle" name="serviceTitle" placeholder="Service Title">
+                <label for="serviceDescription" class="margin">Service Description</label>
+                <textarea name="serviceDescription" class="margin" id="serviceDescription" cols="30" rows="10" placeholder="Service Description"></textarea>
+                <label for="myfile" class="margin">Select a file:</label>
+                <input type="file" id="myfile" name="myfile" class="margin">
+                <div class="closeSaveButtons" class="margin">
+                    <Button class="save-service" id="save-service">Save Changes</Button>
+                    <Button class="close-service" id="close-service">Close</Button>
+                </div>
+            </form>
+
+        </div>
+    </section>
     <footer>
         <div class="footer-block" id="footer-block">
             <div class="social-media-div" id="social-media-div">
@@ -51,6 +77,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/scriptservice.js"></script>
 </body>
 </html>
