@@ -11,13 +11,11 @@ let closeForm = document.getElementById('close-form');
 
 // //////////
 
-
 let closeServiceButton = document.querySelector('.close-service-button');
 let saveServiceButton = document.querySelector('.save-service-button');
 let servicesBlock = document.querySelector('.services-block');
 let deleteServiceButton = document.querySelector('.delete-service-button');
 let serviceDiv = document.querySelector('.service-div');
-
 
 let titleInput = document.querySelector('.titleInput');
 let descriptionInput = document.querySelector('.descriptionInput');

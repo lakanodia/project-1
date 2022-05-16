@@ -2,32 +2,32 @@
 let data = [
     {
         id: 1,
-        imageUrl: 'https://georgiantravelguide.com/storage/files/ardaganis-tba-batumi-ardagani-lake-batumi-3.jpg',
-        title: 'Batumi',
+        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/151013223_918985068676502_3849142729251772248_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=kGnSGINtLPQAX-fsrD0&tn=e92VBgxIx5ljOt_P&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT9kEabjopa20z7hvMb2hR-YP_FkUT29EhvAjzbzUgDrOw&oe=62A85901',
+        title: 'Georgian Memory',
         url:'https://www.google.com/'
     },
     {
         id: 2,
-        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t31.18172-8/17434479_1632400220123360_7318023573805875703_o.jpg?_nc_cat=106&ccb=1-6&_nc_sid=9267fe&_nc_ohc=fAs47GWb_zsAX_SnFIg&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT_ag3v8WI_YP0kmkmDn9EF2LbJyjsyOgQcxR0qUbrrwxw&oe=62A111A4',
-        title: 'Paliastomi',
+        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/138347728_896910734217269_6399647483457817344_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=koS7_osQPzIAX8LbThM&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT_oPFc8bru1cYIPAkS3cdywWd97i-EAMiSWbq3FIYhgvg&oe=62A76200',
+        title: 'Georgian Memory',
         url:'https://www.google.com/'
     },
     {
         id: 3,
-        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t31.18172-8/10344384_963275053702550_5483404344653950204_o.jpg?_nc_cat=109&ccb=1-6&_nc_sid=9267fe&_nc_ohc=6S6jovhLCIkAX_DBVUT&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT-YW8UucOcDtqE_8qJtntrN9yOVToMNgrkyDF75TIAJpQ&oe=62A02DC2',
-        title: 'Tusheti',
+        imageUrl: 'https://scontent.ftbs5-2.fna.fbcdn.net/v/t1.6435-9/122540385_837855746789435_2008932419017411661_n.jpg?_nc_cat=104&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=ZVa_UQPMIacAX9QexGH&_nc_ht=scontent.ftbs5-2.fna&oh=00_AT9P4W6v7yfl5aGVm20Kwx817qJw6Ji6n-3C1afeBMkoQQ&oe=62A93F66',
+        title: 'Georgian Memory',
         url:'https://www.google.com/'
     },
     
     {
         id: 4,
-        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t31.18172-8/10454355_865190593510997_494723374843033858_o.jpg?_nc_cat=101&ccb=1-6&_nc_sid=9267fe&_nc_ohc=S9PX2LR7ZNwAX-JRx88&tn=e92VBgxIx5ljOt_P&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT9H86hK3kJ36Y5gxpw4ob6QG9eF0Gx6WsLSq3mZamdyPQ&oe=62A2B6C2',
+        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/121087684_824501508124859_6983482670906501912_n.jpg?_nc_cat=102&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=6mTIRhCRV8wAX_yiyGc&tn=e92VBgxIx5ljOt_P&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT92YgPLlDb7bslDMCBzJLEMN2O8a_oQHBi9rA__yfxWEg&oe=62A803A3',
         title: 'Kazbegi',
         url:'https://www.google.com/'
     },
     {
         id: 5,
-        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t39.30808-6/237838597_379971683493048_3192286133171823919_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=730e14&_nc_ohc=4FtB01WmllUAX8gIl14&tn=e92VBgxIx5ljOt_P&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT9IS71UZKgriFjn3VapWNWGjNyi90CC2r8eHNjclOmTCw&oe=62802A60',
+        imageUrl: 'https://scontent.ftbs5-2.fna.fbcdn.net/v/t1.6435-9/117645111_781422865766057_5125051654259700568_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=PD_1SlEPLyYAX-jMkFT&_nc_ht=scontent.ftbs5-2.fna&oh=00_AT_X_0X8PfGhOJBGqI93a0809uLsYQfrxSyGKywM8NMZ1Q&oe=62A87B1E',
         title: 'Svaneti',
         url:'https://www.google.com/'
     },
