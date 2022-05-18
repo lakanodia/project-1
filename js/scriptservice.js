@@ -1,21 +1,10 @@
-// Services page add services
-// let serviceCard = document.getElementById('serviceCard');
-// let serviceContent = document.getElementById('serviceContent');
 let serviceFromBlock =document.getElementById('serviceForm-block');
-// let serviceClose = document.getElementById('close-service');
-
 let serviceForm = document.getElementById('serviceForm');
 let addServiceForm = document.getElementById('add-service-form');
-
 let closeForm = document.getElementById('close-form');
-
-// //////////
-
 let closeServiceButton = document.querySelector('.close-service-button');
 let saveServiceButton = document.querySelector('.save-service-button');
 let servicesBlock = document.querySelector('.services-block');
-let deleteServiceButton = document.querySelector('.delete-service-button');
-let serviceDiv = document.querySelector('.service-div');
 
 let titleInput = document.querySelector('.titleInput');
 let descriptionInput = document.querySelector('.descriptionInput');
@@ -33,43 +22,35 @@ closeServiceButton.addEventListener('click', function(event){
     event.preventDefault();
     serviceFromBlock.classList.remove('active-post');
 });
-// სწორად არის დასაწერი!!!!!!!!!
 
-deleteServiceButton.addEventListener('click', function(){
-    serviceDiv.style.display = "none";
-})
+let deleteServiceButton1 = document.querySelector('#static-delete-button-1');
+deleteServiceButton1.addEventListener('click', function(){
+    document.querySelector('#service-div-1').remove();
+});
 
-
-    // let X = document.querySelectorAll('.p-tag');
-// ყველას გადაუარა და ჩასვა ლიკა და ლაკა
-// X.forEach(function(Y){
-//     let newText = document.createElement('a');
-//     newText.classList.add('text');
-//     newText.textContent = 'Laka And Lika'
-//     Y.appendChild(newText);
-// })
+let deleteServiceButton2 = document.querySelector('#static-delete-button-2');
+deleteServiceButton2.addEventListener('click', function(){
+    document.querySelector('#service-div-2').remove();
+});
 
 
 saveServiceButton.addEventListener('click', addNewPost);
-
 function addNewPost(event){
     event.preventDefault();
     let serviceDivElement = document.createElement('div');
     serviceDivElement.classList.add('service-div');
-    //3.ატვირთული ფოტო
-    let inputImgvalue = imgInput.value;
 
-    // //2. დავამატოთ ეს ფოტო იმგ ტეგში
+    // დავამატოთ ფოტო იმგ ტეგში
     let serviceImage = document.createElement('img');
     serviceImage.classList.add('service-img');
-    serviceImage.setAttribute('src', inputImgvalue);
-
-    //1. დავამატოთ ეს ჩაწერილი ტექსტი h2 ტეგებში
+    serviceImage.setAttribute('src', `img/${imgInput.files[0].name}`);
+  
+    // დავამატოთ ეს ჩაწერილი ტექსტი h2 ტეგებში
     let serviceTitle = document.createElement('h2');
     serviceTitle.classList.add('service-title');
     serviceTitle.textContent = titleInput.value;
 
-    //2. დავამატოთ ეს ჩაწერილი ტექსტი p ტეგებში
+    // დავამატოთ ეს ჩაწერილი ტექსტი p ტეგებში
     let serviceDescription = document.createElement('p');
     serviceDescription.classList.add('service-describe');
     serviceDescription.textContent = descriptionInput.value;
@@ -87,7 +68,7 @@ function addNewPost(event){
     serviceDivElement.appendChild(deleteButton);
     servicesBlock.appendChild(serviceDivElement);
     
-    //3. ჩაწერის შემდეგ უნდა გასუფთავდეს
+    // ჩაწერის შემდეგ უნდა გასუფთავდეს
     titleInput.value = '';
     descriptionInput.value = '';
     serviceFromBlock.classList.remove('active-post'); 
