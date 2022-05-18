@@ -64,20 +64,15 @@ function addNewPost(event){
     serviceImage.classList.add('service-img');
     serviceImage.setAttribute('src', inputImgvalue);
 
-    //1. ჩაიწერილი ტექსტის მნიშვნელობა
-    let inputTitlevalue = titleInput.value;
     //1. დავამატოთ ეს ჩაწერილი ტექსტი h2 ტეგებში
     let serviceTitle = document.createElement('h2');
     serviceTitle.classList.add('service-title');
-    serviceTitle.textContent = inputTitlevalue;
-
-    //2.ჩაწერილი აღწერის მნიშვნელობა
-    let inputDescriptionvalue = descriptionInput.value;
+    serviceTitle.textContent = titleInput.value;
 
     //2. დავამატოთ ეს ჩაწერილი ტექსტი p ტეგებში
     let serviceDescription = document.createElement('p');
     serviceDescription.classList.add('service-describe');
-    serviceDescription.textContent = inputDescriptionvalue;
+    serviceDescription.textContent = descriptionInput.value;
     
     let deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-service-button');
@@ -93,10 +88,9 @@ function addNewPost(event){
     servicesBlock.appendChild(serviceDivElement);
     
     //3. ჩაწერის შემდეგ უნდა გასუფთავდეს
-    inputImgvalue.value = '';
-    inputTitlevalue.value = '';
-    inputDescriptionvalue.value = '';
-    serviceFromBlock.style.display = "none";
+    titleInput.value = '';
+    descriptionInput.value = '';
+    serviceFromBlock.classList.remove('active-post'); 
 }
 
 
