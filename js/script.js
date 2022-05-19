@@ -33,9 +33,9 @@ let data = [
     },
     ];
 
-let rightArrow = document.getElementById('rightArrow');
-let leftArrow = document.getElementById('leftArrow');
-let sliderContent = document.getElementById('sliderContent');
+let rightArrow = document.getElementById('right-arrow');
+let leftArrow = document.getElementById('left-arrow');
+let sliderContent = document.getElementById('slider-content');
 let dotList = document.getElementsByClassName('dot');
 
 let sliderIndex = 0;
@@ -130,9 +130,9 @@ setSlider();
 
 // Added http request for posts
 
-let mainPostBlock = document.getElementById('mainPostBlock');
-let postContent = document.getElementById('postContent');
-let postCard = document.getElementById('postCard');
+let mainPostBlock = document.getElementById('main-post-block');
+let postContent = document.getElementById('post-content');
+let postCard = document.getElementById('post-card');
 let postClose = document.getElementById('close');
 
 

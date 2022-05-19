@@ -1,5 +1,4 @@
-let serviceFromBlock =document.getElementById('serviceForm-block');
-let serviceForm = document.getElementById('serviceForm');
+let serviceFromBlock =document.getElementById('service-form-block');
 let addServiceForm = document.getElementById('add-service-form');
 let closeForm = document.getElementById('close-form');
 let closeServiceButton = document.querySelector('.close-service-button');
