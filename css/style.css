@@ -218,7 +218,7 @@ body{
     top: 3%;
     right: 3%;
     font-size: 30px;
-    color: rgb(255, 255, 255);
+    color: rgb(116, 115, 115);
     cursor: pointer;
 }
 .post-title{
@@ -280,8 +280,8 @@ body{
     text-align: center;
     color: white;
     border-radius: 7px;
-    box-shadow: 5px 5px 20px rgba(179, 132, 101, 0.705);
-    background-color: #c0aca3;
+    box-shadow: 5px 5px 20px rgba(46, 41, 38, 0.705);
+    background-color: #151515aa;
     opacity: 70%;
     margin-bottom: 50px;
 }
@@ -343,7 +343,7 @@ body{
     font-size: 15px;
 }
 
-.serviceCard{
+.service-card{
     position: fixed;
     top: 30%;
     left: 0;
@@ -388,30 +388,31 @@ body{
     max-width: 500px;
     width: 100%;
     position: fixed;
-    top: 15%;
+    top: 10%;
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-color: #c0aca3;
+    background-color: #fff4efd7;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 3px;
+    z-index: 3;
 }
 
-.closeSaveButtons {
+.closesave-buttons {
     width: 100%;
     height: 30px;
     display: flex;
     justify-content: right;
 }
 
-.imgInput{
+/* .imgInput{
     border: none;
-}
+} */
 
-.close-service-button,
+/* .close-service-button,
 .save-service-button{
     margin: 0px 10px 0px 10px;
     border: #bda89e;
@@ -419,18 +420,18 @@ body{
     cursor: pointer;
     transition: 1s;
     font-family: 'Comfortaa';
-}
+} */
 
-.titleInput,
+/* .titleInput,
 .imgInput,
 .descriptionInput{
     font-family: 'Comfortaa';
     border: none;
     border-radius: 7px;
     outline: none;
-}
+} */
 
-.close-service-button:hover{
+/* .close-service-button:hover{
     background-color: #d14307c8;
     color: #ffffff;
 }
@@ -438,8 +439,7 @@ body{
 .save-service-button:hover{
     background-color: #d14307c8;
     color: #ffffff;
-}
-
+} */
 
 
 input[type=file]::file-selector-button {
@@ -457,12 +457,10 @@ input[type=file]::file-selector-button {
     background-color: #d14307c8;
     color: #ffffff;
   }
-
-  .style{
-      margin-top: 20px;
-
-  }
-
   .active-post{
     display: block;
+}
+
+.span-error{
+    color: red;
 }
