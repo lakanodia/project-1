@@ -151,7 +151,7 @@ serverRequest('https://jsonplaceholder.typicode.com/posts', function(data){
 });
 
 function printPosts(data) {
-    data.forEach(element => {
+    data.slice(0,6).forEach(element => {
         createPosts(element);             
     });
 }
