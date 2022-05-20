@@ -1,13 +1,15 @@
-let serviceFromBlock =document.getElementById('service-form-block');
-let addServiceForm = document.getElementById('add-service-form');
-let closeForm = document.getElementById('close-form');
-let closeServiceButton = document.querySelector('.close-service-button');
-let saveServiceButton = document.querySelector('.save-service-button');
-let servicesBlock = document.querySelector('.services-block');
+let serviceFromBlock =document.querySelector('#service-form-block');
+let addServiceForm = document.querySelector('#add-service-form');
+let closeForm = document.querySelector('#close-form');
+let closeServiceButton = document.querySelector('#close-service-button');
+let saveServiceButton = document.querySelector('#save-service-button');
+let servicesBlock = document.querySelector('#services-block');
 
-let titleInput = document.querySelector('.titleInput');
-let descriptionInput = document.querySelector('.descriptionInput');
-let imgInput = document.querySelector('.imgInput');
+let titleInput = document.querySelector('#service-title');
+let descriptionInput = document.querySelector('#service-description');
+let imgInput = document.querySelector('#img-input');
+
+
 
 addServiceForm.addEventListener('click', function(){
     serviceFromBlock.classList.add('active-post'); 
@@ -15,10 +17,12 @@ addServiceForm.addEventListener('click', function(){
 
 closeForm.addEventListener('click', function(event){
     event.preventDefault();
+    resetForm();
     serviceFromBlock.classList.remove('active-post');
 });
 closeServiceButton.addEventListener('click', function(event){
     event.preventDefault();
+    resetForm();
     serviceFromBlock.classList.remove('active-post');
 });
 
@@ -33,16 +37,15 @@ deleteServiceButton2.addEventListener('click', function(){
 });
 
 
-saveServiceButton.addEventListener('click', addNewPost);
-function addNewPost(event){
-    event.preventDefault();
+
+function addNewPost(){
     let serviceDivElement = document.createElement('div');
     serviceDivElement.classList.add('service-div');
 
     // დავამატოთ ფოტო იმგ ტეგში
     let serviceImage = document.createElement('img');
     serviceImage.classList.add('service-img');
-    serviceImage.setAttribute('src', `img/${imgInput.files[0].name}`);
+    // serviceImage.setAttribute('src', `img/${imgInput.files[0].name}`);
   
     // დავამატოთ ეს ჩაწერილი ტექსტი h2 ტეგებში
     let serviceTitle = document.createElement('h2');
@@ -68,9 +71,107 @@ function addNewPost(event){
     servicesBlock.appendChild(serviceDivElement);
     
     // ჩაწერის შემდეგ უნდა გასუფთავდეს
+    resetForm();
+    serviceFromBlock.classList.remove('active-post'); 
+}
+function resetForm() {
     titleInput.value = '';
     descriptionInput.value = '';
-    serviceFromBlock.classList.remove('active-post'); 
+    let checkBoxDiv = document.querySelector('#checkbox-main-div');
+    checkBoxDiv.querySelectorAll('input[type="checkbox"]').forEach(element => {
+        element.checked = false;
+    });
+    document.querySelectorAll('input[type="radio"]').forEach(element =>{
+        element.checked = false;
+    });
+    let emailText = document.querySelector('#email');
+    emailText.value ='';
+    resetErrors();
+}
+
+function validateForm() {
+     let errors = {};
+     // ვალიდაცია სერვისის სახელზე მაქსიმუმ 25 სიმბოლო
+     let serviceTitle = document.querySelector('#service-title').value;
+     if (serviceTitle.length>25 || serviceTitle==''){
+         errors.serviceTitle = 'Title can not be more than 25 symbols';
+     }
+
+    // ვალიდაცია სერვისის აღწერაზე მაქსიმუმ 100 სიმბოლო
+    let serviceDescription = document.querySelector('#service-description').value;
+    if (serviceDescription.length>100 || serviceDescription==''){
+        errors.serviceDescription = 'Description can not be more than 100 symbols';
+    }
+        // ვალიდაცია ჩექბოქსზე
+    let isCheckBoxInputValid = false;
+    let checkBoxDiv = document.querySelector('#checkbox-main-div');
+    checkBoxDiv.querySelectorAll('input[type="checkbox"]').forEach(element => {
+        if (element.checked){
+            isCheckBoxInputValid= true;
+        } 
+    });
+        if (isCheckBoxInputValid==false){
+        errors.qualityChoise = 'Please Select';
+    }
+    // ვალიდაცია რედიოზე
+    let isRadioInputValid = false;
+    document.querySelectorAll('input[type="radio"]').forEach(element => {
+        if(element.checked){
+            isRadioInputValid=true;
+        }  
+    });
+    if (isRadioInputValid==false){
+        errors.socialMedia = 'Please Select';
+    }
+    // ვალიდაცია მეილზე
+    let mail = document.querySelector('#email').value;
+    if (mail == ''){
+        errors.email = 'Email can not be empty';
+    }
+     return errors;
 }
 
 
+document.querySelector('#service-form').addEventListener('submit', onServiceFormSubmit);
+
+function onServiceFormSubmit(event){
+    event.preventDefault();
+    let errors = validateForm();
+
+    resetErrors();
+
+    if(Object.keys(errors).length == 0){
+        addNewPost();
+    }else{
+        displayErrors(errors);
+    }
+}
+
+function resetErrors() {
+    document.querySelectorAll('.span-error').forEach(item => {
+        item.innerHTML = '';
+    });
+}
+
+function displayErrors(errors) {
+    for (let item in errors) {
+        let errorSpan = document.getElementById('error_' + item);
+        if (errorSpan) {
+            errorSpan.textContent = errors[item];
+        }
+    }
+}
+
+function validation() {
+    let emailText = document.getElementById('email').value;
+    let spanText = document.getElementById('error_email'); 
+    let emailStructure = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (emailText.match(emailStructure)){
+        spanText.innerHTML = 'Your email is valid';
+        spanText.style.color = 'green';
+    }else{
+        spanText.innerHTML = 'Your email is not valid';
+        spanText.style.color = 'red';
+    }
+}
