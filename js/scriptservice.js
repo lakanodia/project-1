@@ -45,7 +45,7 @@ function addNewPost(){
     // დავამატოთ ფოტო იმგ ტეგში
     let serviceImage = document.createElement('img');
     serviceImage.classList.add('service-img');
-    // serviceImage.setAttribute('src', `img/${imgInput.files[0].name}`);
+    serviceImage.setAttribute('src', `img/${imgInput.files[0].name}`);
   
     // დავამატოთ ეს ჩაწერილი ტექსტი h2 ტეგებში
     let serviceTitle = document.createElement('h2');
