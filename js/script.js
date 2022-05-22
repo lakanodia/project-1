@@ -8,27 +8,27 @@ let data = [
     },
     {
         id: 2,
-        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/138347728_896910734217269_6399647483457817344_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=koS7_osQPzIAX8LbThM&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT_oPFc8bru1cYIPAkS3cdywWd97i-EAMiSWbq3FIYhgvg&oe=62A76200',
+        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/121087684_824501508124859_6983482670906501912_n.jpg?_nc_cat=102&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=6mTIRhCRV8wAX_yiyGc&tn=e92VBgxIx5ljOt_P&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT92YgPLlDb7bslDMCBzJLEMN2O8a_oQHBi9rA__yfxWEg&oe=62A803A3',
         title: 'Georgian Memory',
         url:'https://www.google.com/'
     },
     {
         id: 3,
-        imageUrl: 'https://scontent.ftbs5-2.fna.fbcdn.net/v/t1.6435-9/122540385_837855746789435_2008932419017411661_n.jpg?_nc_cat=104&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=ZVa_UQPMIacAX9QexGH&_nc_ht=scontent.ftbs5-2.fna&oh=00_AT9P4W6v7yfl5aGVm20Kwx817qJw6Ji6n-3C1afeBMkoQQ&oe=62A93F66',
+        imageUrl: 'https://scontent.ftbs5-2.fna.fbcdn.net/v/t1.6435-9/117645111_781422865766057_5125051654259700568_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=PD_1SlEPLyYAX-jMkFT&_nc_ht=scontent.ftbs5-2.fna&oh=00_AT_X_0X8PfGhOJBGqI93a0809uLsYQfrxSyGKywM8NMZ1Q&oe=62A87B1E',
         title: 'Georgian Memory',
         url:'https://www.google.com/'
     },
     
     {
         id: 4,
-        imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/121087684_824501508124859_6983482670906501912_n.jpg?_nc_cat=102&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=6mTIRhCRV8wAX_yiyGc&tn=e92VBgxIx5ljOt_P&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT92YgPLlDb7bslDMCBzJLEMN2O8a_oQHBi9rA__yfxWEg&oe=62A803A3',
-        title: 'Georgian Memory',
+        imageUrl: 'https://i.etsystatic.com/20173918/r/il/fc6af1/2478790956/il_1140xN.2478790956_ezkj.jpg',
+        title: 'Nysa Studio',
         url:'https://www.google.com/'
     },
     {
         id: 5,
-        imageUrl: 'https://scontent.ftbs5-2.fna.fbcdn.net/v/t1.6435-9/117645111_781422865766057_5125051654259700568_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=PD_1SlEPLyYAX-jMkFT&_nc_ht=scontent.ftbs5-2.fna&oh=00_AT_X_0X8PfGhOJBGqI93a0809uLsYQfrxSyGKywM8NMZ1Q&oe=62A87B1E',
-        title: 'Georgian Memory',
+        imageUrl: 'https://www.epoxywood.uk/wp-content/uploads/2020/06/seascape-pin1.jpg',
+        title: 'Nysa Studio',
         url:'https://www.google.com/'
     },
     ];
@@ -230,5 +230,19 @@ var today = new Date();
 var currentDate = document.getElementById('current-date');
 currentDate.innerHTML = today;
 
+
+// show burger bar 
+let navigation = document.getElementById('nav-block');
+let burgerButton = document.getElementById('burger-bar');
+let topChild = document.getElementById('top-child');
+let middleChild = document.getElementById('middle-child');
+let bottomChild = document.getElementById('bottom-child');
+
+burgerButton.addEventListener('click', function(){
+    navigation.classList.toggle('activeNavigation');
+    topChild.classList.toggle('top');
+    middleChild.classList.toggle('middle');
+    bottomChild.classList.toggle('bottom');
+});
 
 
