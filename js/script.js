@@ -124,7 +124,7 @@ rightArrow.addEventListener('click', rightArrowClick);
 
 setInterval(() => {
     rightArrowClick();
-}, 3000);
+}, 4000);
 
 setSlider();
 
@@ -155,7 +155,8 @@ function printPosts(data) {
         createPosts(element);             
     });
 }
-// postElement may would change to p tag or it depends on what would be in real post
+
+
 function createPosts(item){
     let post = document.createElement('div');
     post.classList.add('post-div');
@@ -197,7 +198,6 @@ function onTextClick(event) {
     openPostCard(id);
 }
 
-
 function openPostCard(id){
     postCard.classList.add('active-post');
     let url = `https://jsonplaceholder.typicode.com/posts/${id}`;
@@ -205,7 +205,6 @@ function openPostCard(id){
         postCardInfo(data);
     });
 }
-
 
 function postCardInfo(item){
     let titlePost = document.createElement('h2');

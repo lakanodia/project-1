@@ -9,8 +9,6 @@ let titleInput = document.querySelector('#service-title');
 let descriptionInput = document.querySelector('#service-description');
 let imgInput = document.querySelector('#img-input');
 
-
-
 addServiceForm.addEventListener('click', function(){
     serviceFromBlock.classList.add('active-post'); 
 });
@@ -175,7 +173,6 @@ function validation() {
         spanText.style.color = 'red';
     }
 }
-
 
 // burger bar
 let navigation = document.getElementById('nav-block');
