@@ -24,7 +24,7 @@
     <header>
         <div class="header-block" id="header-block">
             <a class="logo-link" id="logo-link" href="index.html">
-                <img class="logo-icon" src="img/logo.png"alt="logo" style="width: 58px;">
+                <div class="logo"></div>
             </a>
             <nav class="nav-block" id="nav-block">
                 <ul class="nav-ul">
@@ -36,6 +36,11 @@
                     </li>
                 </ul>
             </nav>
+            <div class="burger-bar" id="burger-bar">
+                <div class="burger-child" id="top-child"></div> 
+                <div class="burger-child" id="middle-child"></div> 
+                <div class="burger-child" id="bottom-child"></div> 
+            </div>
         </div>
     </header>
     <section>
@@ -50,7 +55,6 @@
                     The main line of the brand is Georgian themed scarves. The illustrations on the products tell a
                     small fragment about the history, culture and traditions of Georgia, the products with their packaging
                     are an interesting and memorable souvenir for foreign guests</p>
-                <!-- <button class="view-service-button">View Service</button> -->
                 <button class="delete-service-button" id="static-delete-button-1">Delete Service</button>
             </div>
             <div class="service-div" id="service-div-2">
@@ -60,7 +64,6 @@
                     brand for interior and exterior interiors. By working with innovative materials 
                     (epoxy) they create completely different, creative items or furniture and at the same time 
                     give the customer the opportunity to give their old or standard furniture a new aesthetics and life.</p>
-                <!-- <button class="view-service-button">View Service</button> -->
                 <button class="delete-service-button static-delete-button" id="static-delete-button-2">Delete Service</button>
             </div>
         </div>
@@ -71,15 +74,15 @@
         </div>
         <div class="service-form-block" id="service-form-block"> 
             <form action="" method="POST" class="service-form" id="service-form">
-                <h3 class="style" style="font-weight: 900;">Create New Service or Product</h3>
+                <h3 class="newservice-title" >Create New Service or Product</h3>
+                <div class="horizontal-line"></div>
                 <div class="close-icon" id="close-form"> <i class="fa-solid fa-xmark"> </i></div>
-
                 <label for="serviceTitle" class="titleLabel">*Service Title</label>
                 <input type="text" class="title-input" id="service-title" name="serviceTitle" placeholder="Service Title">
                 <span  class="span-error" id="error_serviceTitle"></span>
                 
                 <label for="service-description" class="service-description"> *Service Description</label>
-                <textarea name="serviceDescription" class="description-input" id="service-description" cols="30" rows="6" placeholder="Service Description"></textarea>
+                <textarea name="serviceDescription" class="description-input" id="service-description" rows="5" placeholder="Service Description"></textarea>
                 <span  class="span-error" id="error_serviceDescription"></span>
 
                 <h3>Which of following words would you use to describe your product or service?</h3>
@@ -99,9 +102,9 @@
                     <div class="checkbox-div" id="awareness-checkbox">
                         <input type="checkbox" id="awareness-input" name="awarenessChoise">
                         <label for="awareness-input"> High Awareness</label>
-                        <span  class="span-error" id="error_qualityChoise"></span>
                     </div>
                 </div>
+                <span  class="span-error" id="error_qualityChoise"></span>
 
                 <h3>Which of following social media is most popular communicate way for you?</h3>
                 <div class="radio-div" id="fb-radio">
@@ -115,22 +118,23 @@
                 <div class="radio-div" id="linkdin-radio">
                     <input type="radio" id="linkdin-input" name="socialMedia" >
                     <label for="linkdin-input">Linkdin</label>
-                    <span  class="span-error" id="error_socialMedia"></span>
                 </div>
+                <span  class="span-error" id="error_socialMedia"></span>
 
                 <div class="email-div" id="email-div">
                     <label for="email">Enter your email:</label>
                     <input type="email" id="email" name="email" onkeydown="validation()">
-                    <span  class="span-error" id="error_email"></span>
                 </div>
-
+                <span  class="span-error" id="error_email"></span>
                 <label for="myfile" class="file-select";>*Select a file:</label>
                 <input type="file" id="img-input" name="myfile" class="img-input">
                 
+               
                 <div class="closesave-buttons" class="">
                     <Button class="close-service-button" id="close-service-button">Close</Button>
                     <Button class="save-service-button" id="save-service-button">Save Changes</Button>
                 </div>
+                
             </form>
         </div>
     </section>
