@@ -46,3 +46,9 @@
         justify-content: center;
     }
 }
+
+@media(max-width:406px){
+    .section-post-title{
+        font-size: 30px;
+    }
+}
