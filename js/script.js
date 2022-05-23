@@ -4,32 +4,32 @@ let data = [
         id: 1,
         imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/151013223_918985068676502_3849142729251772248_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=kGnSGINtLPQAX-fsrD0&tn=e92VBgxIx5ljOt_P&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT9kEabjopa20z7hvMb2hR-YP_FkUT29EhvAjzbzUgDrOw&oe=62A85901',
         title: 'Georgian Memory',
-        url:'https://www.google.com/'
+        url:'https://www.facebook.com/georgianmemory'
     },
     {
         id: 2,
         imageUrl: 'https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/121087684_824501508124859_6983482670906501912_n.jpg?_nc_cat=102&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=6mTIRhCRV8wAX_yiyGc&tn=e92VBgxIx5ljOt_P&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT92YgPLlDb7bslDMCBzJLEMN2O8a_oQHBi9rA__yfxWEg&oe=62A803A3',
         title: 'Georgian Memory',
-        url:'https://www.google.com/'
+        url:'https://www.facebook.com/georgianmemory'
     },
     {
         id: 3,
         imageUrl: 'https://scontent.ftbs5-2.fna.fbcdn.net/v/t1.6435-9/117645111_781422865766057_5125051654259700568_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=PD_1SlEPLyYAX-jMkFT&_nc_ht=scontent.ftbs5-2.fna&oh=00_AT_X_0X8PfGhOJBGqI93a0809uLsYQfrxSyGKywM8NMZ1Q&oe=62A87B1E',
         title: 'Georgian Memory',
-        url:'https://www.google.com/'
+        url:'https://www.facebook.com/georgianmemory'
     },
     
     {
         id: 4,
         imageUrl: 'https://i.etsystatic.com/20173918/r/il/fc6af1/2478790956/il_1140xN.2478790956_ezkj.jpg',
         title: 'Nysa Studio',
-        url:'https://www.google.com/'
+        url:'https://www.facebook.com/NysaStudioTbilisi'
     },
     {
         id: 5,
         imageUrl: 'https://www.epoxywood.uk/wp-content/uploads/2020/06/seascape-pin1.jpg',
         title: 'Nysa Studio',
-        url:'https://www.google.com/'
+        url:'https://www.facebook.com/NysaStudioTbilisi'
     },
     ];
 
