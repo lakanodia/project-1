@@ -1,4 +1,4 @@
-// Added slider
+// Added slider, make slider array
 let data = [
     {
         id: 1,
@@ -40,20 +40,24 @@ let dotList = document.getElementsByClassName('dot');
 
 let sliderIndex = 0;
 
+// create a tag to append slider title
 function createAtag(item){
     let aTag = document.createElement('a');
+    aTag.setAttribute('target', '_blank');
     aTag.setAttribute('href', item.url);
     aTag.classList.add('a-link');
 
     return aTag;
 }
 
+// create background image tag
 function createImgTag(item){
     sliderContent.style.backgroundImage = 'url(' + item.imageUrl + ')';
     sliderContent.style.backgroundRepeat = "no-repeat";
     sliderContent.style.backgroundSize = "cover";
 }
 
+// create slider title tag
 function createH2Tag(item){
     let h2Tag = document.createElement('h2');
     h2Tag.classList.add('h2-link');
@@ -62,7 +66,9 @@ function createH2Tag(item){
     return h2Tag;
 }
 
-function createDots(item){
+// this function will create as many dots as there are slides
+// And when we press the point we have to move it to the corresponding slide
+function createDots(){
     let dots = document.createElement('div');
     dots.classList.add('dots');
 
@@ -81,11 +87,11 @@ function createDots(item){
     return dots;
 }
 
+// create active dots on slider
 function activeDot(){
     dotList[sliderIndex].classList.add('active');
 }
-
-
+// create slider content and aooend all elements
 function setSlider(){
     sliderContent.innerHTML = '';
     createImgTag(data[sliderIndex]);
@@ -99,7 +105,7 @@ function setSlider(){
     activeDot();
 }
 
-
+// arrow
 function rightArrowClick(){
     if(sliderIndex >= data.length-1){
         sliderIndex = 0;
@@ -110,6 +116,7 @@ function rightArrowClick(){
     setSlider();
 }
 
+// arrow
 function leftArrowClick(){
     if(sliderIndex <= 0){
         sliderIndex = data.length-1;
@@ -122,13 +129,14 @@ function leftArrowClick(){
 leftArrow.addEventListener('click', leftArrowClick);
 rightArrow.addEventListener('click', rightArrowClick);
 
+
 setInterval(() => {
     rightArrowClick();
 }, 4000);
 
 setSlider();
 
-// Added http request for posts
+// Added http request for posts json
 
 let mainPostBlock = document.getElementById('main-post-block');
 let postContent = document.getElementById('post-content');
@@ -156,7 +164,7 @@ function printPosts(data) {
     });
 }
 
-
+// this function brings posts from server, get id and title
 function createPosts(item){
     let post = document.createElement('div');
     post.classList.add('post-div');
@@ -189,8 +197,7 @@ function createPosts(item){
 
     mainPostBlock.appendChild(post);
 }
-
-
+// this function opens the post by clicking anywhere
 function onTextClick(event) {
     event.stopPropagation();
     postContent.innerHTML = '';
@@ -198,6 +205,7 @@ function onTextClick(event) {
     openPostCard(id);
 }
 
+// this function opens the specific post that I select
 function openPostCard(id){
     postCard.classList.add('active-post');
     let url = `https://jsonplaceholder.typicode.com/posts/${id}`;
@@ -205,7 +213,7 @@ function openPostCard(id){
         postCardInfo(data);
     });
 }
-
+// this function shows what should appear when a post will open
 function postCardInfo(item){
     let titlePost = document.createElement('h2');
     titlePost.classList.add('post-title');
@@ -223,12 +231,13 @@ function postCardInfo(item){
     });
 }
 
-
-// This is current date
-var today = new Date(); 
-var currentDate = document.getElementById('current-date');
-currentDate.innerHTML = today;
-
+// This is current date on footer
+function currentDate(){
+    var today = new Date(); 
+    var date = document.getElementById('current-date');
+    date.innerHTML = today;
+}
+currentDate();
 
 // show burger bar 
 let navigation = document.getElementById('nav-block');
