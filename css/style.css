@@ -2,7 +2,8 @@ body{
     font-family: 'Comfortaa';
     background-color: rgba(0, 0, 0, 0.827);
 }
-
+/* Header styles */
+/* Making logo */
 .logo{
     width: 40px;
     height: 40px;
@@ -21,7 +22,6 @@ body{
     left: 8px;
     transition: 0.2s;
 }
-
 .logo::after{
     content: "";
     background-color: rgba(34, 224, 199, 0.504);
@@ -42,10 +42,10 @@ body{
     font-weight: 900;
     margin: 80px;
 }
+/* style header */
 .header-block{
     display: flex;
     justify-content: space-between;
-    align-items: center;    
     position: fixed;
     font-weight: 900;
     background-color:rgba(22, 21, 21, 0.944);
@@ -70,8 +70,7 @@ body{
     transition: background-color 0.5s ease-out;
 }
 .nav-li:hover{
-    box-shadow: 0px 0px 10px rgb(168, 127, 255);
-    
+    box-shadow: 0px 0px 10px rgb(168, 127, 255); 
 }
 
 .nav-a{
@@ -80,8 +79,9 @@ body{
 .nav-block{
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
 }
+/* style slider */
 .slider-block{
     position: relative;
     height: 70vh;
@@ -99,15 +99,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-/* .slider-content::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.799);
-    display: inline-block;
-    opacity: 60%;
-} */
 .arrow {
     position: absolute;
     top: 50%;
@@ -184,6 +175,7 @@ body{
     background: linear-gradient(to top right, #c043faf6 0%, #333dffbc 100%);
     opacity: 100%;
 }
+/* style section and posts*/
 .post-div{
     max-width: 350px;
     width: 100%;
@@ -213,11 +205,9 @@ body{
     font-size: 20px;
     font-family: 'Comfortaa';
 }
-
 .view-post {
     color: #fff;
     text-decoration: none;
-    /* display: inline-block; */
     position: relative;
 }
 .view-post:after {    
@@ -241,9 +231,9 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
-    
+    padding: 20px; 
 }
+/*style post card that opens after click */
 .post-card{
     position: fixed;
     top: 20%;
@@ -266,10 +256,8 @@ body{
     flex-direction: column;
     vertical-align: middle;
     text-align: center;
-    color: rgb(11, 11, 11);
-    
+    color: rgb(11, 11, 11); 
 }
-
 .close-icon{
     position: absolute;
     top: 1.5%;
@@ -285,14 +273,13 @@ body{
     margin-bottom: 5%;
     margin-top: 10%;
 }
-
 .post-description{
     text-align: center;
     font-size: 20px;
     margin-bottom: 5%;
     margin-top: 5%;
-
 }
+/* style footer */
 .footer-block{
     display: flex;
     justify-content: space-between;
@@ -307,11 +294,16 @@ body{
     z-index: 1;
 }
 .social-media-div{
-    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
     width: 100%;
     padding-top: 10px;
 }
-.fb-text{
+.fb-text,
+.insta-text,
+.date-block{
+    color: rgb(246, 246, 246);
     margin-left: 10px;
     font-size: 12px;
 }
@@ -329,28 +321,19 @@ body{
 .color{
     background-color: #00c0c3;
 }
-.fb-div{
+.fb-div,
+.insta-div{
     display: flex;
     align-items: center;
     color: white;
     margin-bottom: 10px;
-}
-.twitter{
-    background-color: #55ACEE;
-}
-.google{
-    background-color: #DC4E41;
-}
-.social-icons{
-    display: flex;
-    justify-content: flex-start;
 }
 .current-date{
     color: rgb(255, 255, 255);
 }
 
 
-/* Service Styles */
+/* Style page 2 - Service */
 .services-block{
     max-width: 1000px;
     margin: 60px auto;
@@ -391,7 +374,6 @@ body{
     margin-top: 10px;
     font-size: 20px;
 }
-
 .delete-service-button{
     border-radius: 8px;
     border: none;
@@ -403,8 +385,7 @@ body{
     box-shadow: none;
     cursor: pointer;
     transition: background-color 0.5s ease-out;
-    font-family: 'Comfortaa';
-    
+    font-family: 'Comfortaa';    
 }
 .delete-service-button:hover{
     background-color:#070707a5;
@@ -413,7 +394,6 @@ body{
 .service-describe{
     font-size: 15px;
 }
-
 .service-card{
     position: fixed;
     top: 30%;
@@ -429,11 +409,10 @@ body{
     display: none;
 }
 
-/* add new service styles */
-
-.add-service-form{
-    border-radius: 80px;
-    width: 150px;
+/* style add new service*/
+.add-service-icon{
+    max-width: 150px;
+    width: 100%;
     height: 150px;
     margin: 0 auto;
     background-color:#bda89e00; 
@@ -446,15 +425,17 @@ body{
     font-weight: 900;
     box-shadow: 0px 2px 10px 0px rgb(168, 127, 255);
     cursor: pointer;
-    transition: 0.3s;
     border: solid;
+    border-radius: 80px;
     border-color:rgb(168, 127, 255);
     border-width: 2px;
+    transition: 0.3s;
 }
-.add-service-form:hover{
+.add-service-icon:hover{
     transform: translateY(-2px);
     box-shadow: 0px 10px 20px 2px rgba(193, 164, 255, 0.603);
 }
+/* Style form */
 .service-form-block{
     display: none;
 }
@@ -500,27 +481,24 @@ input[type="email"]{
     font-family: 'Comfortaa';
     background-color:   #ffffff00; 
 }
-
 #service-title,
 #email{
     outline: none;
     border: none;
     border-bottom: 2px solid  rgb(146, 145, 145);
-    margin-top: 15px;
+    margin-top: 8px;
 }
-
 #service-description{
     outline: none;
     border: 2px solid  rgb(146, 145, 145);
-    margin-top: 12px;
-}
-.span-error{
     margin-top: 10px;
 }
-
+.span-error{
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
 input[type=file]::file-selector-button {
     height: 30px;
-    padding: .2em .4em;
     border: none;
     border-radius: 7px;
     background-color: #ffffff00;
@@ -528,8 +506,7 @@ input[type=file]::file-selector-button {
     cursor: pointer;
     font-family: 'Comfortaa';
 }
-
-  input[type=file]::file-selector-button:hover{
+input[type=file]::file-selector-button:hover{
     background-color: #c6bdd5c8;
     color: #ffffff;
 }
@@ -551,7 +528,6 @@ input[type=file]::file-selector-button {
     background-color:  #c6bdd5c8;
     color: #ffffff;
 }
-
 .active-post{
     display: block;
 }
@@ -560,7 +536,7 @@ input[type=file]::file-selector-button {
     color: red;
 }
 
-/* burger bar */
+/*style burger bar */
 .burger-child{
     width: 40px;
     height: 5px;
@@ -575,6 +551,5 @@ input[type=file]::file-selector-button {
     transform: translateY(-50%);
     right: 10px;
     display: none;
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
