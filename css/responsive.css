@@ -11,7 +11,7 @@
     }
     .nav-ul{
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         height: 150px;
         margin-top: 30px;
     }
@@ -51,4 +51,8 @@
     .section-post-title{
         font-size: 35px;
     }
+    .footer-block{
+        flex-direction: column;
+    }
+
 }
