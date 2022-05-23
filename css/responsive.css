@@ -47,8 +47,8 @@
     }
 }
 
-@media(max-width:406px){
+@media(max-width:450px){
     .section-post-title{
-        font-size: 30px;
+        font-size: 35px;
     }
 }
