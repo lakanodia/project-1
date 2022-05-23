@@ -45,7 +45,7 @@
     </header>
     <section>
         <h1 class="section-post-title" >Information About Services and Products</h1>
-        <div class="add-service-form" id="add-service-form">Add new Services</div>
+        <div class="add-service-icon" id="add-service-icon">Add new Services</div>
 
         <div class="services-block" id="services-block">
             <div class="service-div" id="service-div-1">
@@ -128,8 +128,7 @@
                 <span  class="span-error" id="error_email"></span>
                 <label for="myfile" class="file-select";>*Select a file:</label>
                 <input type="file" id="img-input" name="myfile" class="img-input">
-                
-        
+                <span  class="span-error" id="error_myfile"></span>
                 
                 <div class="closesave-buttons" class="">
                     <Button class="close-service-button" id="close-service-button">Close</Button>
@@ -142,23 +141,40 @@
     <footer>
         <div class="footer-block" id="footer-block">
             <div class="social-media-div">
-                <div class="fb-div">
-                    <a href="https://www.facebook.com/georgianmemory/" class="icon-block" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <p class="fb-text">Georgian Memory</p>
+                <div class="fb-main-div">
+                    <div class="fb-div">
+                        <a href="https://www.facebook.com/georgianmemory/" class="icon-block" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.facebook.com/georgianmemory/" class="fb-text" target="_blank">Georgian Memory</a>
+                    </div>
+                    <div class="fb-div">
+                        <a href="https://www.facebook.com/NysaStudioTbilisi" class="icon-block color" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href = "https://www.facebook.com/NysaStudioTbilisi" class="fb-text" target="_blank">Nysa Studio</a>
+                    </div>
                 </div>
-                <div class="fb-div">
-                    <a href="https://www.facebook.com/NysaStudioTbilisi" class="icon-block color" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <p class="fb-text">Nysa Studio</p>
-                </div>
+
+                <div class="insta-main-div">
+                    <div class="insta-div">
+                        <a href="https://www.instagram.com/georgianmemory/?hl=en" class="icon-block" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/georgianmemory/?hl=en" class="insta-text" target="_blank">Georgian Memory</a>
+                    </div>
+                    <div class="fb-div">
+                        <a href="https://www.instagram.com/nysa___studio/?hl=en" class="icon-block color" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href = "https://www.instagram.com/nysa___studio/?hl=en" class="insta-text" target="_blank">Nysa Studio</a>
+                    </div> 
+                </div>       
             </div>
             <div class="date-block" id="date-block">
                 <P class="current-date" id="current-date"></P>
             </div>
-        </div> 
+        </div>
     </footer>
     <script src="js/scriptservice.js"></script>
 </body>
