@@ -169,9 +169,9 @@ function createPosts(item){
     let post = document.createElement('div');
     post.classList.add('post-div');
     post.setAttribute('data-id', item.id);
-
+    
     let postTitle = document.createElement('h2');
-    postTitle.classList.add('title');
+    postTitle.classList.add('h2-title');
     postTitle.textContent =  item.id;
 
     let postElement = document.createElement('h3');
@@ -209,6 +209,7 @@ function onTextClick(event) {
 function openPostCard(id){
     postCard.classList.add('active-post');
     let url = `https://jsonplaceholder.typicode.com/posts/${id}`;
+    console.log(url);
     serverRequest(url, function(data){
         postCardInfo(data);
     });
