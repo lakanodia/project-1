@@ -129,7 +129,7 @@ function validateForm() {
     if (mail == ''){
         errors.email = 'Email can not be empty';
     }
-    // validation on image
+    // validation on image size, image type and empty image input
     let files = imgInput.files
     if (files.length > 0) {
         let fileType = files[0].type;
@@ -145,6 +145,8 @@ function validateForm() {
         if (fileSize > maxFileSizeMb) {
             errors.myfile = 'Please select image size less than 1 MB';
         }
+    }else{
+        errors.myfile = 'Please select image';
     }
     return errors;
 };
