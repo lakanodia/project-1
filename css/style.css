@@ -491,8 +491,8 @@ input[type="email"]{
     margin-top: 10px;
 }
 .span-error{
-    margin-top: 5px;
-    margin-bottom: 8px;
+    margin-top: 4px;
+    margin-bottom: 6px;
 }
 input[type=file]::file-selector-button {
     height: 30px;
