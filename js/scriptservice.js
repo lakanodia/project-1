@@ -94,13 +94,13 @@ function validateForm() {
      // validation in the name of the service is a maximum of 25 characters
     let serviceTitle = document.querySelector('#service-title').value;
     if (serviceTitle.length>25 || serviceTitle==''){
-        errors.serviceTitle = 'Title can not be more than 25 symbols';
+        errors.serviceTitle = 'Title can not be empty and can not be more than 25 symbols';
     }
 
     // validation service description maximum  100 symbols  
     let serviceDescription = document.querySelector('#service-description').value;
     if (serviceDescription.length>100 || serviceDescription==''){
-        errors.serviceDescription = 'Description can not be more than 100 symbols';
+        errors.serviceDescription = 'Description can not be empty and can not be more than 100 symbols';
     }
 
     // validation at checkbox
