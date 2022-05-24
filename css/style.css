@@ -177,9 +177,9 @@ body{
 }
 /* style section and posts*/
 .post-div{
-    max-width: 350px;
+    max-width: 450px;
     width: 100%;
-    height: 200px;
+    height: 300px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -202,7 +202,8 @@ body{
     color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 900;
     font-family: 'Comfortaa';
 }
 .view-post {
@@ -225,13 +226,24 @@ body{
     left: 0; 
 }
 .main-post-block{
-    max-width: 800px;
+    max-width: 1000px;
     margin: 100px auto;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px; 
+}
+.h2-title{
+    font-size: 35px;
+    font-weight: 900;  
+    text-shadow: 0px 15px 15px #ffffffd1;
+}
+.h2-title::after{
+
+}
+.title{
+    font-size: 22px;
 }
 /*style post card that opens after click */
 .post-card{
@@ -431,6 +443,9 @@ body{
 .add-service-icon:hover{
     transform: translateY(-2px);
     box-shadow: 0px 10px 20px 2px rgba(193, 164, 255, 0.603);
+}
+.service-describe{
+    word-break: break-all;
 }
 /* Style form */
 .service-form-block{
