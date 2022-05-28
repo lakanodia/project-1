@@ -154,7 +154,9 @@ function serverRequest(url,callBack){
     request.send();
 };
 
-serverRequest('https://jsonplaceholder.typicode.com/posts', function(data){
+// https://api.npoint.io/44c1c313d40c0811ad19?fbclid=IwAR0Soc4b2H9q4hysAcZHt5CXQ-ysYvYLHpg7vZiY0oWGqo9L5HRhTBeVB9s
+
+serverRequest('https://api.npoint.io/44c1c313d40c0811ad19?fbclid=IwAR0Soc4b2H9q4hysAcZHt5CXQ-ysYvYLHpg7vZiY0oWGqo9L5HRhTBeVB9s', function(data){
     printPosts(data)
 });
 
@@ -164,15 +166,23 @@ function printPosts(data) {
     });
 }
 
+
+// post.setAttribute('data-id', item.id-1); setatributes ყველას დავუწერე -1
+
 // this function brings posts from server, get id and title
 function createPosts(item){
     let post = document.createElement('div');
     post.classList.add('post-div');
-    post.setAttribute('data-id', item.id);
-    
+    post.setAttribute('data-id', item.id-1);
+       
     let postTitle = document.createElement('h2');
     postTitle.classList.add('h2-title');
     postTitle.textContent =  item.id;
+
+    // დაპრინტულ პოსტებზე გამოვაჩინე IMG 
+    let postIMG = document.createElement('img');
+    postIMG.classList.add('img-post');
+    postIMG.setAttribute('src',item.image);
 
     let postElement = document.createElement('h3');
     postElement.classList.add('title');
@@ -181,7 +191,7 @@ function createPosts(item){
     let postviewButton = document.createElement('button');
     postviewButton.classList.add('view-post');
     postviewButton.textContent = 'View Post';
-    postviewButton.setAttribute('data-id', item.id);
+    postviewButton.setAttribute('data-id', item.id-1);
 
     post.addEventListener('click', function(event){
         postContent.innerHTML = '';
@@ -190,8 +200,10 @@ function createPosts(item){
     });
     postTitle.addEventListener('click', onTextClick); 
     postElement.addEventListener('click', onTextClick); 
+    postIMG.addEventListener('click', onTextClick); 
 
     post.appendChild(postTitle);
+    post.appendChild(postIMG);
     post.appendChild(postElement);
     post.appendChild(postviewButton);
 
@@ -205,25 +217,33 @@ function onTextClick(event) {
     openPostCard(id);
 }
 
+// დავამატე  postCardInfo(data[id]);
 // this function opens the specific post that I select
 function openPostCard(id){
     postCard.classList.add('active-post');
-    let url = `https://jsonplaceholder.typicode.com/posts/${id}`;
-    console.log(url);
+    let url = `https://api.npoint.io/44c1c313d40c0811ad19?fbclid=IwAR0Soc4b2H9q4hysAcZHt5CXQ-ysYvYLHpg7vZiY0oWGqo9L5HRhTBeVB9s/${id}`;
     serverRequest(url, function(data){
-        postCardInfo(data);
+        console.log(data[id]);
+        postCardInfo(data[id]);
     });
 }
 // this function shows what should appear when a post will open
 function postCardInfo(item){
     let titlePost = document.createElement('h2');
     titlePost.classList.add('post-title');
-    titlePost.innerText = item.title;
+    titlePost.innerHTML = item.title;
+
     let descriptionPost = document.createElement('p');
     descriptionPost.classList.add('post-description');
-    descriptionPost.innerText = item.body;
+    descriptionPost.innerHTML = item.description;
+// დავამატე სურათის ტეგი
+    let postImage = document.createElement('img');
+    postImage.classList.add('post-img');
+    postImage.setAttribute('src', item.image);
+ 
     postContent.appendChild(titlePost);
     postContent.appendChild(descriptionPost);
+    postContent.appendChild(postImage);
     postCard.appendChild(postContent);
 
     postClose.addEventListener('click', function(){

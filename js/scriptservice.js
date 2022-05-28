@@ -84,7 +84,7 @@ function resetForm() {
         element.checked = false;
     });
     let emailText = document.querySelector('#email');
-    emailText.value ='';
+    emailText.value = '';
     resetErrors();
 }
 
@@ -130,7 +130,7 @@ function validateForm() {
         errors.email = 'Email can not be empty';
     }
     // validation on image size, image type and empty image input
-    let files = imgInput.files
+    let files = imgInput.files;
     if (files.length > 0) {
         let fileType = files[0].type;
         let fileSize = files[0].size;
@@ -170,7 +170,9 @@ function onServiceFormSubmit(event){
 // this function resets error span texts after opening a service form
 function resetErrors() {
     document.querySelectorAll('.span-error').forEach(item => {
+        let spanText = document.getElementById('error_email'); 
         item.innerHTML = '';
+        spanText.style.color = 'red';
     });
 }
 
@@ -180,6 +182,7 @@ function displayErrors(errors) {
         let errorSpan = document.getElementById('error_' + item);
         if (errorSpan) {
             errorSpan.textContent = errors[item];
+
         }
     }
 }

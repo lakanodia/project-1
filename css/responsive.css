@@ -57,3 +57,13 @@
     }
 
 }
+
+@media(max-width:407px){
+    .h2-title,
+    .title,
+    .view-post,
+    .post-title,
+    .post-description{
+        font-size: 20px;
+    }
+}
