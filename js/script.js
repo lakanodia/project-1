@@ -153,9 +153,7 @@ function serverRequest(url,callBack){
     })
     request.send();
 };
-
 // https://api.npoint.io/44c1c313d40c0811ad19?fbclid=IwAR0Soc4b2H9q4hysAcZHt5CXQ-ysYvYLHpg7vZiY0oWGqo9L5HRhTBeVB9s
-
 serverRequest('https://api.npoint.io/44c1c313d40c0811ad19?fbclid=IwAR0Soc4b2H9q4hysAcZHt5CXQ-ysYvYLHpg7vZiY0oWGqo9L5HRhTBeVB9s', function(data){
     printPosts(data)
 });
@@ -166,9 +164,7 @@ function printPosts(data) {
     });
 }
 
-
 // post.setAttribute('data-id', item.id-1); setatributes ყველას დავუწერე -1
-
 // this function brings posts from server, get id and title
 function createPosts(item){
     let post = document.createElement('div');
@@ -216,7 +212,6 @@ function onTextClick(event) {
     let id = event.target.parentElement.getAttribute('data-id');
     openPostCard(id);
 }
-
 // დავამატე  postCardInfo(data[id]);
 // this function opens the specific post that I select
 function openPostCard(id){
